@@ -97,7 +97,11 @@ export default function Calculator() {
 
     const power = () => {
         const { num1, num2 } = getValues();
-        displayResult(num1 ** num2);
+        let result = 1;
+        for (let i = 0; i < num2; i++) {
+            result *= num1;
+        }
+        displayResult(result);
     };
 
     const clearCalculator = () => {
